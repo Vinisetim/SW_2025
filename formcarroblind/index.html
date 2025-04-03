@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de seguros - Carro Blindado</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h2>Calculadora de seguro</h2>
+    <form id="formseguro">
+
+        <label for="">Nome do Segurado:
+            <input type="text" id="nome" required>
+        </label>
+
+        <label for="">Idade do Segurado
+            <input type="number" id="idade" required>
+        </label>
+
+
+        <label for="">Estado Cívil
+        <select name="" id="estadoCivil">
+            <option value="solteiro">Solteiro</option>
+            <option value="casado">Casado</option>
+            </select>
+        </label>
+
+        <label for=""> Número de Motoristas Adicionais:
+            <input type="number" id="motoristasaAdicionais" value="0" min="0" required>       
+        </label>
+        <label for="">Nome do Veículo
+            <input type="text" id="veiculo" required>
+        </label>
+        <label for="">Classe do Veículo
+            <select id="classeVeiculo">
+                <option value="A">Classe A</option>
+                <option value="B">Classe B</option>
+                <option value="C">Classe C</option>
+            </select>
+        </label>
+        <button type="button" onclick="calcularSeguro()">Calcular Seguro</button>
+
+    </form>
+    <h3>Resultado</h3>
+    <p id="resultado"></p>
+</body>
+</html>
