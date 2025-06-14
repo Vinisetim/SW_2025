@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portifólio Poggers</title>
+</head>
+<body>
+ <div class="particulas"></div>
+<nav class="navegacao">
+    <ul class="menu">
+        <li>
+            <a href="#inicio" class="menu-link">Início</a>
+        </li>
+        <li>
+            <a href="#sobre" class="menu-link">Sobre</a>
+        </li>
+        <li>
+            <a href="#projetos" class="menu-link">Projetos</a>
+        </li>
+        <li>
+            <a href="#contatos" class="menu-link">Contato</a>
+        </li>
+    </ul>
+</nav>
+<main id="inicio" class="cabeçalho">
+        <img src="img/profile.JPG" alt="imagem-de-perfil-que-nao-e-eu" class="foto-perfil">
+        <h1>Vinícius Games</h1>
+        <p class="cabeçalho-subtitulo">Tentativa de Desenvolvedor</p>	
+        <div>
+</main>
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá, meu nome é Vinícius, tenho 16 anos e sou um estudante de programação. Estou sempre buscando aprender mais sobre desenvolvimento de software e aprimorar minhas habilidades. Atualmente, estou focado em projetos que envolvem HTML, CSS e JavaScript, e estou animado para compartilhar meu portfólio com você.
+            </p>
+        </div>
+    </div>
+    </section>
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="img/projeto1.JPG" alt="Descrição do Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                <h3 class="info-projetos">Tutorial</h3>
+                <p class="paragrafo-projetos">Um breve tutorial sobre Linguagem orientada a objetos</p>
+                </div>
+            </div>
+              <div class="projetos-card">
+                <img src="img/projeto2.JPG" alt="Descrição do Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos"> 
+                <h3 class="info-projetos">Jogo de adivinhação</h3>
+                <p class="paragrafo-projetos">Um pequeno jogo sobre acertar o nome de um personagem</p>
+                </div>
+            </div>
+               <div class="projetos-card">
+                <img src="img/jogodamemoria.jpg" alt="Descrição do Projeto 3" class="projetos-imagem">
+                 <div class="caixa-textos-projetos">
+                <h3 class="info-projetos">Jogo da Memória</h3>
+                <p class="paragrafo-projetos">Um jogo da memória simples em JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+      
+      <form class="formulario-contato" id="formulario" onsubmit="enviar(event)">
+        <div class="grupo-form">
+            <input class="campo-form" placeholder="Nome" id="nome">
+        </div>
+            <div class="grupo-form">
+            <textarea placeholder="Digite sua mensagem" class="campo-form" id="mensagem" rows="4"></textarea>
+        </div>
+
+        <BUtton type="submit" class="button-form">Enviar Mensagem</BUtton>
+     </form>
+     
+    </section>
+     
+    <script>
+       function enviar(event){
+        event.preventDefault()
+       const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+        const telefone = '5511975649922';
+        const texto = `Olá! me chamo ${nome}, ${mensagem}`;
+        const formatmsg = encodeURIComponent (texto);
+        const url = `https://whatsa.me/${telefone}/?t=${mensagem}`;
+
+        window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
